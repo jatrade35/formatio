@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<twig:Header />
+<div class="d-flex justify-content-center" >
+    <div  class="col-10" style="width:85%">
+        <section >
+            <div  class="page-header">
+                <img src="images/Page header home.png" style="width:100%;" />
+            </div>
+        </section>
+        <twig:Formations />
+        <twig:About />
+        <twig:Temoignage />
+        <twig:Actualites />
+    </div>
+</div>
+<twig:Footer />
+<script>
+    jQuery(document).ready(function($) {
+        var owl = $('.owl-carousel');
+
+        // set a flag to alert if previous slide from click
+        var prevFlag = false;
+
+        // call event listeners before carousel so it knows its initiated.
+        owl.on('prev.owl.carousel', function(event) {
+            prevFlag = true
+        });
+
+        owl.on('changed.owl.carousel initialized.owl.carousel', function(event) {
+            var owlItems  = event.item.count;   // Total number of items (consistent and accurate)
+            var item      = event.item.index;   // Owl reported position of the current item (inconsistent and inaccurate)
+            var calcItem  = Math.floor(item - (owlItems / 2) + 1); // slightly more logical position of the current item (if not from previous click)
+
+            // if from previous click
+            if(prevFlag) {
+            if (calcItem === 0) {  // reports 0 instead of last value
+                calcItem = owlItems; // solve that problem
+            }
+            }
+
+            // handle values that fall outside of logical min/max bounds
+            if(prevFlag === false && calcItem === 0 || calcItem > owlItems) {
+            calcItem = 1;
+            }
+
+            // update counter
+            console.log(calcItem + '/' + owlItems);
+
+            // reset previous flag
+            prevFlag = false
+        });
+
+        // build carousel
+        owl.owlCarousel({
+            // autoHeight: true,
+            nav: false,
+            dots: false,
+            items: 1,
+            loop: true,
+            smartSpeed: 750,
+        });
+
+        $('.next').click(function() { owl.trigger('next.owl.carousel'); });
+        $('.prev').click(function() { owl.trigger('prev.owl.carousel'); });
+
+        $('.loop').owlCarousel({
+            center: true,
+            checkVisible: false,
+            items: 1,
+            loop: true,
+            rewind: true,
+            margin: 10,
+            responsive: {
+                0: { items: 1 },
+                400: { items: 1 },
+                740: { items: 1 },
+                940: { items: 1 }}
+        });
+        $('.nonloop').owlCarousel({
+            center: true,
+            items: 1,
+            loop: false,
+            margin: 10,
+            responsive: {
+                600: {
+                items: 1
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}
