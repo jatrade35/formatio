@@ -9,4 +9,5 @@ final class Header
 {
   public String $titleone;
   public String $titletwo;
+  public String $routePath;
 }

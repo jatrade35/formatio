@@ -8,11 +8,15 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
+    #[Route('/', name: 'accueil')]
     public function index(): Response
     {
-        return $this->render('main/index.html.twig', [
-            'controller_name' => 'MainController',
-        ]);
+        return $this->render('main/index.html.twig', []);
+    }
+    
+    #[Route('/qui-sommes-nous', name: 'about')]
+    public function about(): Response
+    {
+        return $this->render('main/about.html.twig', []);
     }
 }
