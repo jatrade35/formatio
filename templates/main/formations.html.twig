@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Formations{% endblock %}
+
+{% block body %}
+<twig:Header routePath="/" />
+<div class="d-flex justify-content-center" >
+    <div  class="col-10" style="width:85%">
+        <section >
+            <div  class="page-header" style="background-image:url('/images/Nos Formations.jpg');">
+                <img src="/images/PageHeader formations.png" style="width:100%;" />
+            </div>
+        </section>
+        <twig:Catalogue />
+        <twig:Temoignage />
+        <section >
+            <main class="comment-inscription">
+                <h1 class="comment-inscription__title">Comment s'inscrire</h1>
+                <section class="comment-inscription__content">
+                <h2 class="comment-inscription__subtitle">
+                    <span class="comment-inscription__subtitle-highlight">Généralités</span>
+                </h2>
+                <p class="comment-inscription__description">
+                    Toute personne désirant transiger monétairement avec FORMATIO doit se créer un compte afin de fournir les informations requises pour le paiement des formations. Si un client ne désire pas utiliser le processus de paiement par carte bancaire, il devra effectuer son paiement par chèque au secrétariat.
+                </p>
+                </section>
+                <section class="comment-inscription__images">
+                <figure class="comment-inscription__image-wrapper">
+                    <a href="/videos/Comment-creer-son-compte-FORMATIO.mp4" target="_blank">
+                        <img src="/images/creation-dun-compte-formatio.png" alt="Inscription image 1" class="comment-inscription__image" />
+                    </a>
+                </figure>
+                <figure class="comment-inscription__image-wrapper">
+                    <a href="/videos/Inscription-a-un-cours-ou-atelier.mp4" target="_blank">
+                        <img src="/images/inscription_formatio.png" alt="Inscription image 2" class="comment-inscription__image" />
+                    </a>
+                </figure>
+                <figure class="comment-inscription__image-wrapper">
+                    <a href="/documents/Creation-compte-et-formations.pdf" target="_blank">
+                        <img src="/images/manuel_formatio.png" alt="Inscription image 3" class="comment-inscription__image" />
+                    </a>
+                </figure>
+                </section>
+            </main>
+        </section>
+    </div>
+</div>
+<twig:Footer />
+<script>
+    jQuery(document).ready(function($) {
+        var owl = $('.owl-carousel');
+
+        // set a flag to alert if previous slide from click
+        var prevFlag = false;
+
+        // call event listeners before carousel so it knows its initiated.
+        owl.on('prev.owl.carousel', function(event) {
+            prevFlag = true
+        });
+
+        owl.on('changed.owl.carousel initialized.owl.carousel', function(event) {
+            var owlItems  = event.item.count;   // Total number of items (consistent and accurate)
+            var item      = event.item.index;   // Owl reported position of the current item (inconsistent and inaccurate)
+            var calcItem  = Math.floor(item - (owlItems / 2) + 1); // slightly more logical position of the current item (if not from previous click)
+
+            // if from previous click
+            if(prevFlag) {
+            if (calcItem === 0) {  // reports 0 instead of last value
+                calcItem = owlItems; // solve that problem
+            }
+            }
+
+            // handle values that fall outside of logical min/max bounds
+            if(prevFlag === false && calcItem === 0 || calcItem > owlItems) {
+            calcItem = 1;
+            }
+
+            // update counter
+            console.log(calcItem + '/' + owlItems);
+
+            // reset previous flag
+            prevFlag = false
+        });
+
+        // build carousel
+        owl.owlCarousel({
+            // autoHeight: true,
+            nav: false,
+            dots: false,
+            items: 1,
+            loop: true,
+            smartSpeed: 750,
+        });
+
+        $('.next').click(function() { owl.trigger('next.owl.carousel'); });
+        $('.prev').click(function() { owl.trigger('prev.owl.carousel'); });
+
+        $('.loop').owlCarousel({
+            center: true,
+            checkVisible: false,
+            items: 1,
+            loop: true,
+            rewind: true,
+            margin: 10,
+            responsive: {
+                0: { items: 1 },
+                400: { items: 1 },
+                740: { items: 1 },
+                940: { items: 1 }}
+        });
+        $('.nonloop').owlCarousel({
+            center: true,
+            items: 1,
+            loop: false,
+            margin: 10,
+            responsive: {
+                600: {
+                items: 1
+                }
+            }
+        });
+    });
+</script>
+<script>
+    const passwordShowIcon = document.querySelector('.eye-icon');
+    const input = document.querySelector('.password-box input');
+    const test = document.querySelector('#test-rene');
+    var password = true;
+
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+</script>
+{% endblock %}

@@ -7,89 +7,145 @@
 <div class="d-flex justify-content-center" >
     <div  class="col-10" style="width:85%">
         <section >
-            <div  class="page-header">
-                <img src="images/Page header home.png" style="width:100%;" />
+            <div  class="page-header" style="background-image:url('/images/about.png');">
+                <img src="/images/Page header about.png" style="width:100%;" />
             </div>
         </section>
-        <twig:Formations />
-        <twig:About />
-        <twig:Temoignage />
-        <twig:Actualites />
+        <section style="margin-top:40px;">
+            <div style="text-align:center;">
+                <h2 class="organization-title">L'organisation</h2>
+            </div>
+            <div class="organization-content">
+                <img src="/images/Qui sommes nous.png" alt="Organization background" class="organization-background" />
+                <div class="organization-description">
+                    <p>
+                        Créée à Brossard en 2000 sous le nom de Réseau Internet de Brossard (RIB), FORMATIO est une entreprise d'économie sociale vouée à la formation dans le domaine numérique. FORMATIO a grandi rapidement en tissant des liens étroits avec les associations, groupes communautaires et organismes du milieu avec qui nous partageons la réussite.
+                    </p>
+                    <p>
+                        Par leur enseignement, plus de 30 formateurs compétents et dévoués assurent un transfert de connaissances en groupes ou individuellement et sur mesure à des clients souhaitant découvrir ou se perfectionner en bureautique et informatique. Sur demande, nous effectuons des formations sur les lieux de travail, en résidences pour aînés, bibliothèques ou autres endroits appropriés.
+                    </p>
+                    <p>
+                        FORMATIO contribue à l'insertion sociale, à l'employabilité, à briser l'isolement et à la découverte de nouveaux horizons. Nos formations sont accessibles à tous et nous tenons compte des parcours de chacun. La clientèle peut compter sur notre matériel informatique, les logiciels, les équipements appropriés. Nous développons nous-mêmes la plupart de nos outils pédagogiques.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="board-of-directors">
+                <h2 class="board-title">Le conseil d'administration</h2>
+                <div class="board-cards">
+                    <div class="profile-card">
+                        <img src="/images/Alain_Lewis-250x312.png" alt="Profile picture of Alain Lewis" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Alain Lewis</h2>
+                            <p class="profile-title">PRÉSIDENT</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Josée_Bergevin-250x312.png" alt="Profile picture of Josée Bergevin" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Josée Bergevin</h2>
+                            <p class="profile-title">SECRÉTAIRE</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Joyce_Zi_Lang-250x312.png" alt="Profile picture of Joyce Zi Liang" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Joyce Zi Liang</h2>
+                            <p class="profile-title">TRÉSORIÈRE</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Michel_Mainville-250x312.png" alt="Profile picture of Michel Mainville" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Michel Mainville</h2>
+                            <p class="profile-title">ADMINISTRATEUR</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Ali-Khan_Sanchis-250x312.png" alt="Profile picture of Ali-Khan Sanchis" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Ali-Khan Sanchis</h2>
+                            <p class="profile-title">ADMINISTRATEUR</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Germain_Belanger-250x312.png" alt="Profile picture of Germain Bélanger" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Germain Bélanger</h2>
+                            <p class="profile-title">ADMINISTRATEUR</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Daniel_Houle-250x312.png" alt="Profile picture of Daniel Houle" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Daniel Houle</h2>
+                            <p class="profile-title">ADMINISTRATEUR</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/Anne-Solène_Rioult-250x312.png" alt="Profile picture of Anne-Solène Rioult" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">Anne-Solène Rioult</h2>
+                            <p class="profile-title">ADMINISTRATRICE</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/images/René_Lanteigne-250x312.png" alt="Profile picture of René Lanteigne" class="profile-image" />
+                        <div class="profile-info">
+                            <h2 class="profile-name">René Lanteigne</h2>
+                            <p class="profile-title">ADMINISTRATEUR</p>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+        <twig:Equipe />
+        <twig:Partenaires />
     </div>
 </div>
 <twig:Footer />
 <script>
     jQuery(document).ready(function($) {
-        var owl = $('.owl-carousel');
-
-        // set a flag to alert if previous slide from click
-        var prevFlag = false;
-
-        // call event listeners before carousel so it knows its initiated.
-        owl.on('prev.owl.carousel', function(event) {
-            prevFlag = true
-        });
-
-        owl.on('changed.owl.carousel initialized.owl.carousel', function(event) {
-            var owlItems  = event.item.count;   // Total number of items (consistent and accurate)
-            var item      = event.item.index;   // Owl reported position of the current item (inconsistent and inaccurate)
-            var calcItem  = Math.floor(item - (owlItems / 2) + 1); // slightly more logical position of the current item (if not from previous click)
-
-            // if from previous click
-            if(prevFlag) {
-            if (calcItem === 0) {  // reports 0 instead of last value
-                calcItem = owlItems; // solve that problem
-            }
-            }
-
-            // handle values that fall outside of logical min/max bounds
-            if(prevFlag === false && calcItem === 0 || calcItem > owlItems) {
-            calcItem = 1;
-            }
-
-            // update counter
-            console.log(calcItem + '/' + owlItems);
-
-            // reset previous flag
-            prevFlag = false
-        });
-
-        // build carousel
-        owl.owlCarousel({
+        // build carousels
+        $('.owl-one').owlCarousel({
             // autoHeight: true,
             nav: false,
             dots: false,
             items: 1,
             loop: true,
+            rewind: false,
+            margin: 10,
             smartSpeed: 750,
-        });
-
-        $('.next').click(function() { owl.trigger('next.owl.carousel'); });
-        $('.prev').click(function() { owl.trigger('prev.owl.carousel'); });
-
-        $('.loop').owlCarousel({
             center: true,
             checkVisible: false,
-            items: 1,
-            loop: true,
-            rewind: true,
-            margin: 10,
             responsive: {
                 0: { items: 1 },
                 400: { items: 1 },
                 740: { items: 1 },
                 940: { items: 1 }}
         });
-        $('.nonloop').owlCarousel({
-            center: true,
-            items: 1,
-            loop: false,
+        $('.owl-two').owlCarousel({
+            autoHeight: true,
+            slideTransition: 'linear',
+            autoplayTimeout: 3000,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            autoplay: true,
+            nav: false,
+            dots: false,
+            items: 3,
+            loop: true,
+            rewind: false,
             margin: 10,
+            smartSpeed: 750,
+            center: false,
+            checkVisible: true,
             responsive: {
-                600: {
-                items: 1
-                }
-            }
+                0: { items: 1 },
+                400: { items: 2 },
+                740: { items: 3 },
+                940: { items: 3 }}
         });
     });
 </script>

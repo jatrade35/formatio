@@ -19,4 +19,10 @@ class MainController extends AbstractController
     {
         return $this->render('main/about.html.twig', []);
     }
+
+    #[Route('/formations', name: 'formations')]
+    public function formations(): Response
+    {
+        return $this->render('main/formations.html.twig', []);
+    }
 }
