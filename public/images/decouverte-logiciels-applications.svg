@@ -1,0 +1,19 @@
+<svg id="decouverte-logiciels-applications" xmlns="http://www.w3.org/2000/svg" width="90" height="75" viewBox="0 0 90 75">
+  <path id="Tracé_80" data-name="Tracé 80" d="M24.384,72H21v3H34.5V72H27.516l3.6-12H34.5V57H6a3,3,0,0,1-3-3V51H34.5V48H3V6A3,3,0,0,1,6,3H69a3,3,0,0,1,3,3V18h3V6a6,6,0,0,0-6-6H6A6,6,0,0,0,0,6V54a6,6,0,0,0,6,6H27.984Zm0,0"/>
+  <path id="Tracé_81" data-name="Tracé 81" d="M92,67v3h3V65.5A1.5,1.5,0,0,0,93.5,64h-60A1.5,1.5,0,0,0,32,65.5v18A1.5,1.5,0,0,0,33.5,85h27V82H35V67Zm0,0" transform="translate(-26 -52)"/>
+  <path id="Tracé_82" data-name="Tracé 82" d="M51.5,201v-7.5A1.5,1.5,0,0,0,50,192H33.5a1.5,1.5,0,0,0-1.5,1.5V201h3v-6H48.5v6Zm0,0" transform="translate(-26 -156)"/>
+  <path id="Tracé_83" data-name="Tracé 83" d="M152,193.5V201h3v-6h3v-3h-4.5A1.5,1.5,0,0,0,152,193.5Zm0,0" transform="translate(-123.5 -156)"/>
+  <path id="Tracé_84" data-name="Tracé 84" d="M32,32h3v3H32Zm0,0" transform="translate(-26 -26)"/>
+  <path id="Tracé_85" data-name="Tracé 85" d="M64,32h3v3H64Zm0,0" transform="translate(-52 -26)"/>
+  <path id="Tracé_86" data-name="Tracé 86" d="M96,32h3v3H96Zm0,0" transform="translate(-78 -26)"/>
+  <path id="Tracé_87" data-name="Tracé 87" d="M242,124v-7.5a4.5,4.5,0,0,0-4.5-4.5h-33a4.5,4.5,0,0,0-4.5,4.5v45a4.5,4.5,0,0,0,4.5,4.5h21v-3h-21a1.5,1.5,0,0,1-1.5-1.5V160h22.5v-3H203V116.5a1.5,1.5,0,0,1,1.5-1.5h33a1.5,1.5,0,0,1,1.5,1.5V124Zm0,0" transform="translate(-162.5 -91)"/>
+  <path id="Tracé_88" data-name="Tracé 88" d="M240,144h4.5v3H240Zm0,0" transform="translate(-195 -117)"/>
+  <path id="Tracé_89" data-name="Tracé 89" d="M280,144h4.5v3H280Zm0,0" transform="translate(-227.5 -117)"/>
+  <path id="Tracé_90" data-name="Tracé 90" d="M320,144h4.5v3H320Zm0,0" transform="translate(-260 -117)"/>
+  <path id="Tracé_91" data-name="Tracé 91" d="M360,144h4.5v3H360Zm0,0" transform="translate(-292.5 -117)"/>
+  <path id="Tracé_92" data-name="Tracé 92" d="M235,179h19.5v-3h-21a1.5,1.5,0,0,0-1.5,1.5V188a1.5,1.5,0,0,0,1.5,1.5h18v-3H235Zm0,0" transform="translate(-188.5 -143)"/>
+  <path id="Tracé_93" data-name="Tracé 93" d="M251.5,267v-3h-18a1.5,1.5,0,0,0-1.5,1.5V276a1.5,1.5,0,0,0,1.5,1.5h18v-3H235V267Zm0,0" transform="translate(-188.5 -214.5)"/>
+  <path id="Tracé_94" data-name="Tracé 94" d="M371.5,192h-15a4.5,4.5,0,0,0-4.5,4.5v30a4.5,4.5,0,0,0,4.5,4.5h15a4.5,4.5,0,0,0,4.5-4.5v-30A4.5,4.5,0,0,0,371.5,192Zm1.5,34.5a1.5,1.5,0,0,1-1.5,1.5h-15a1.5,1.5,0,0,1-1.5-1.5V225h18Zm0-4.5H355V196.5a1.5,1.5,0,0,1,1.5-1.5h15a1.5,1.5,0,0,1,1.5,1.5Zm0,0" transform="translate(-286 -156)"/>
+  <path id="Tracé_95" data-name="Tracé 95" d="M394.5,224h-9a1.5,1.5,0,0,0-1.5,1.5v6a1.5,1.5,0,0,0,1.5,1.5h9a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,394.5,224Zm-1.5,6h-6v-3h6Zm0,0" transform="translate(-312 -182)"/>
+  <path id="Tracé_96" data-name="Tracé 96" d="M394.5,288h-9a1.5,1.5,0,0,0-1.5,1.5v6a1.5,1.5,0,0,0,1.5,1.5h9a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,394.5,288Zm-1.5,6h-6v-3h6Zm0,0" transform="translate(-312 -234)"/>
+</svg>

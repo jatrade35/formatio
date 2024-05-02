@@ -25,4 +25,10 @@ class MainController extends AbstractController
     {
         return $this->render('main/formations.html.twig', []);
     }
+
+    #[Route('/club-informatique', name: 'club')]
+    public function club(): Response
+    {
+        return $this->render('main/club.html.twig', []);
+    }
 }

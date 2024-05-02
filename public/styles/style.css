@@ -1683,3 +1683,312 @@ label .bi {
     margin-left: 0;
   }
 }
+
+.club-info {
+  border-radius: 20px;
+  background-color: #3489f7c2;
+  position: relative;
+  display: flex;
+  width: 758px;
+  max-width: 100%;
+  flex-direction: column;
+  padding: 46px 51px 80px;
+}
+
+@media (max-width: 991px) {
+  .club-info {
+    padding: 0 20px;
+  }
+}
+
+.club-info__title {
+  text-align: center;
+  align-self: center;
+  font: 500 40px ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+  color:#fff;
+}
+
+@media (max-width: 991px) {
+  .club-info__title {
+    max-width: 100%;
+  }
+}
+
+.club-info__description {
+  margin: 58px 0 30px;
+  font: 300 20px ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+  color:#fff;
+}
+
+@media (max-width: 991px) {
+  .club-info__description {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+}
+
+.benefits-title {
+  color: #ee9800;
+  font: 48px/46% ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .benefits-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.benefits-grid {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 69px;
+}
+
+@media (max-width: 991px) {
+  .benefits-grid {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    margin-top: 40px;
+  }
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.benefit-icon {
+  width: 124px;
+  max-width: 100%;
+  align-self: center;
+  object-fit: auto;
+  object-position: center;
+}
+
+.benefit-description {
+  font-family: ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 38px;
+}
+
+.decorative-icon {
+  width: 108px;
+  max-width: 100%;
+  object-fit: auto;
+  object-position: center;
+  alt: "";
+}
+
+@media (max-width: 991px) {
+  .decorative-icon {
+    margin-top: 40px;
+  }
+}
+
+.cta-description {
+  font-family: ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 27px;
+}
+
+.cta-button {
+  border-radius: 20px;
+  border:none;
+  background-color: #ee9800;
+  text-wrap: nowrap;
+  margin-top: 42px;
+  color: #fff;
+  padding: 10px 28px;
+  font: 24px/133% ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .cta-button {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  aspect-ratio: 2.17;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+  align-self: stretch;
+}
+@media (max-width: 991px) {
+  .img {
+    max-width: 100%;
+  }
+}
+
+.accordion-button {
+  font-size: 40px;
+  color: #29acb9;
+  font-weight: 500;
+}
+
+.accordion-button::after {
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 42%;
+  margin-left: 0px;
+}
+@media (max-width: 991px) {
+  .column {
+    width: 100%;
+  }
+}
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 58%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column-2 {
+    width: 100%;
+  }
+}
+
+.div-6 {
+  color: #29acb9;
+  font: 500 40px/55% ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+  margin: 25px 0px;
+}
+@media (max-width: 991px) {
+  .div-6 {
+    max-width: 100%;
+  }
+}
+
+.div-12 {
+  color: #ee9800;
+  text-align: center;
+  margin-top: 46px;
+  font: 500 24px/133% ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-12 {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.recherche-reunions {
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 100%;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0 20px;
+}
+@media (max-width: 991px) {
+  .recherche-reunions {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.recherche-hint {
+  color: #999191;
+  font-family: ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  line-height: 92%;
+  align-self: end;
+  margin-top: 25px;
+  flex-grow: 1;
+  flex-basis: auto;
+  border: none;
+}
+@media (max-width: 991px) {
+  .recherche-hint {
+    max-width: 100%;
+  }
+}
+.recherche-hint:focus {
+  outline: none;;
+}
+
+.recherche-btn {
+  font-family: ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  border-radius: 57px;
+  background-color: #ee9800;
+  color: var(--White, #fff);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 133%;
+  justify-content: center;
+  padding: 21px 23px;
+}
+@media (max-width: 991px) {
+  .recherche-btn {
+    white-space: initial;
+    padding: 0 20px;
+  }
+}
+
+.recherche-hr {
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #000;
+  margin-top: 8px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 1px;
+}
+
+.presentation-card-title
+ {
+  min-height: 100px;
+  color: #ee9800;
+  text-align: center;
+  font: 500 24px/133% ITC Avant Garde Gothic Std, -apple-system, Roboto,
+    Helvetica, sans-serif;
+}
+.presentation-card-src {
+  color: #6d6b6b;
+  letter-spacing: -1.6px;
+  margin-top: 10px;
+  font: 600 16px/200% ITC Avant Garde Gothic Std, -apple-system, Roboto,
+    Helvetica, sans-serif;
+}
+.presentation-card-desc {
+  color: #000;
+  letter-spacing: -1px;
+  align-self: start;
+  margin: 14px 0 0 10px;
+  font: 300 20px/32px ITC Avant Garde Gothic Std, -apple-system, Roboto,
+    Helvetica, sans-serif;
+}

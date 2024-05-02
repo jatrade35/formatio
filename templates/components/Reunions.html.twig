@@ -1,0 +1,229 @@
+<div class="div" style="margin:50px 0px;">
+{% set janvierCollapsed = "collapsed" %}
+{% set janvierShow = "" %}
+{% set fevrierCollapsed = "collapsed" %}
+{% set fevrierShow = "" %}
+{% set marsCollapsed = "collapsed" %}
+{% set marsShow = "" %}
+{% set avrilCollapsed = "collapsed" %}
+{% set avrilShow = "" %}
+{% set maiCollapsed = "collapsed" %}
+{% set maiShow = "" %}
+{% set month = "now"|date("m")%}
+{% if month == '01' %}
+    {% set janvierCollapsed = "" %}
+    {% set janvierShow = "show" %}
+{% elseif month == '02' %}
+    {% set fevrierCollapsed = "" %}
+    {% set fevrierShow = "show" %}
+{% elseif month == '03' %}
+    {% set marsCollapsed = "" %}
+    {% set marsShow = "show" %}
+{% elseif month == '04' %}
+    {% set avrilCollapsed = "" %}
+    {% set avrilShow = "show" %}
+{% elseif month == '05' %}
+    {% set maiCollapsed = "" %}
+    {% set maiShow = "show" %}
+{% endif %}
+
+    <img loading="lazy" src="/images/FORMATIO-Hiver-2024.png" class="img" />
+    <div class="accordion" id="accordionExample" style="min-width:100%;max-width:100%">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button {{janvierCollapsed}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Janvier
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse {{janvierShow}}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table" style="width:100%;">
+                        <tbody>
+                            <tr style="display:flex;">
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240118.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>18 JANVIER</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240125.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>25 JANVIER</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;"></td>
+                                <td style="width:25%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button {{fevrierCollapsed}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Février
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse {{fevrierShow}}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table" style="width:100%;">
+                        <tbody>
+                            <tr style="display:flex;">
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240201.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>1 FÉVRIER</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240208.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>8 FÉVRIER</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240215.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>15 FÉVRIER</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240222.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>22 FÉVRIER</b></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="display:flex;">
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240229.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>29 FÉVRIER</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;"></td>
+                                <td style="width:25%;"></td>
+                                <td style="width:25%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button {{marsCollapsed}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Mars
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse {{marsShow}}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table" style="width:100%;">
+                        <tbody>
+                            <tr style="display:flex;">
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/Relache.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>7 MARS</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240314.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>14 MARS</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240321.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>21 MARS</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240328.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>28 MARS</b></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button {{avrilCollapsed}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Avril
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse {{avrilShow}}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table" style="width:100%;">
+                        <tbody>
+                            <tr style="display:flex;">
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240404.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>4 AVRIL</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240411.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>11 AVRIL</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240418.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>18 AVRIL</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240425.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>25 AVRIL</b></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button {{maiCollapsed}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Mai
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse {{maiShow}}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table" style="width:100%;">
+                        <tbody>
+                            <tr style="display:flex;">
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/ODJ-20240502.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>2 MAI</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;text-align:center;display:flex;">
+                                    <div style="flex-grow:inherit;display:flex;justify-content:space-between;flex-direction: column;">
+                                        <img src="/images/reunions/Portovino.png" style="width:100%;" />
+                                        <p style="self-align:bottom;"><b>9 MAI<br/>Diner fin de session</b></p>
+                                    </div>
+                                </td>
+                                <td style="width:25%;"></td>
+                                <td style="width:25%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

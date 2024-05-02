@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Club Informatique{% endblock %}
+{% block stylesheets %}
+<style>
+    li::marker {
+        color:#29acb9;
+        font-size: 2em;
+    }
+    ul {
+        font: 300 20px/30px ITC Avant Garde Gothic Std, -apple-system, Roboto, Helvetica, sans-serif;
+
+    }
+</style>
+{% endblock %}
+{% block body %}
+<twig:Header routePath="/" />
+<div class="d-flex justify-content-center" >
+    <div  class="col-10" style="width:85%">
+        <section >
+            <div  class="page-header" style="background-image:url('/images/club informatique.png');">
+                <img src="/images/Page header club.png" style="width:100%;" />
+            </div>
+        </section>
+        <twig:Club />
+        <twig:Benefits />
+        <twig:Reunions />
+        <twig:Membres />
+        <twig:Presentations />
+    </div>
+</div>
+<twig:Footer />
+<script>
+</script>
+<script>
+    const passwordShowIcon = document.querySelector('.eye-icon');
+    const input = document.querySelector('.password-box input');
+    const test = document.querySelector('#test-rene');
+    var password = true;
+
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+</script>
+{% endblock %}
