@@ -29,4 +29,3 @@ config/secrets/dev/dev.decrypt.private.php
 config/secrets/dev/dev.encrypt.public.php
 config/secrets/dev/dev.googleMapURL.2b3da0.php
 config/secrets/dev/dev.list.php
-.env
