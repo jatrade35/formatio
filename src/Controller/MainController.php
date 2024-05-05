@@ -35,6 +35,6 @@ class MainController extends AbstractController
     #[Route('/joindre', name: 'joindre')]
     public function joindre(): Response
     {
-        return $this->render('main/joindre.html.twig', []);
+        return $this->render('main/joindre.html.twig', ["GOOGLE_MAP_URL"=>$_ENV['GOOGLE_MAP_URL']]);
     }
 }
