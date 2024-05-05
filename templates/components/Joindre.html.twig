@@ -1,0 +1,60 @@
+<div class="joindre-div" style="margin:50px 0px;min-width:100%;">
+    <div class="row" style="">
+        <div class="column" style="padding:0px 50px;">
+            <div class="joindre-title">Nous joindre</div>
+            <div class="joindre-paragraph">
+                Vous avez des questions à propos de nos cours&nbsp;? Quel niveau vous
+                convient le mieux&nbsp;? Quelles sont les prochaines dates&nbsp;? Vous avez un
+                besoin de formation précis&nbsp;? Vous cherchez à prendre un cours
+                particulier&nbsp;?<br />Choisissez le bouton
+                <span style="font-weight: 600">Formation</span>.<br /><br />Vous
+                voulez joindre ou avoir plus d’information au sujet du Club
+                informatique
+                <span style="font-weight: 600">FORMATIO</span>&nbsp;?<br />Choisissez le
+                bouton
+                <span style="font-weight: 600">Club informatique</span
+                >.<br /><br />Pour toutes autres questions, choisissez le bouton
+                <span style="font-weight: 600">Autre (spécifier)</span>, et
+                spécifiez le sujet du message.
+            </div>
+        </div>
+        <div class="column" style="width:58%;padding:0px 50px;">
+            <div class="joindre-title">Formulaire de contact</div>
+            <form name="contactForm">
+                <div class="form-group">
+                    <input style="margin: 15px 0px;" type="text" class="form-control" id="contactName" placeholder="Nom complet (Nécessaire)" required/>
+                </div>
+                <div class="form-group">
+                    <input style="margin: 15px 0px;" type="email" class="form-control" id="contactEmail" placeholder="Courriel (Nécessaire)" required/>
+                </div>
+                <div class="form-group">
+                    <input style="margin: 15px 0px;" type="tel" class="form-control" id="contactTel" placeholder="Téléphone" />
+                </div>
+                <div class="form-group">
+                    <h3 style="text-align:center;">Sujet</h3>
+                    <div class="form-check form-check-inline" oninvalid="this.setCustomValidity('Inscrivez votre sujet.')" >
+                        <input class="form-check-input" type="radio" name="subjectRadioOptions" id="inlineCheckbox1" value="Formation" onchange="subjectChange('#inlineCheckbox1');"
+                              required>
+                        <label class="form-check-label joindre-paragraph" for="inlineCheckbox1">Formation</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="subjectRadioOptions" id="inlineCheckbox2" value="Club informatique" onchange="subjectChange('#inlineCheckbox2');" required>
+                        <label class="form-check-label joindre-paragraph" for="inlineCheckbox2">Club informatique</label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="subjectRadioOptions" id="inlineCheckbox3" value="Autre" onchange="subjectChange('#inlineCheckbox3');" required>
+                        <label class="form-check-label joindre-paragraph" for="inlineCheckbox3">Autre (specifier)</label>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
+                        <input style="width:96%;margin: 0px 25px;" type="text" class="form-control" id="contactSubjet" placeholder="Autre" 
+                            oninvalid="this.setCustomValidity('Inscrivez votre sujet.')" oninput="setCustomValidity('')" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="contactMessage" placeholder="Message" rows="5" style="margin: 20px 0px;"
+                        oninvalid="this.setCustomValidity('Inscrivez votre message.')" oninput="setCustomValidity('')" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="background-color:#29acb9;border:none;">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</div>

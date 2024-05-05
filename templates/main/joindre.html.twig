@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous joindre{% endblock %}
+{% block body %}
+<twig:Header routePath="/" />
+<div class="d-flex justify-content-center" >
+    <div  class="col-10" style="width:85%">
+        <section >
+            <div  class="page-header" style="background-image:url('/images/sign-4944144_1920.jpg');">
+                <img src="/images/Page header joindre.png" style="width:100%;" />
+            </div>
+        </section>
+        <twig:Joindre />
+        <twig:Map />
+    </div>
+</div>
+<twig:Footer />
+<script>
+    async function initMap() {
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        const map = new Map(document.getElementById("map"), {
+            center: { lat: 45.4490336162423, lng: -73.45495868390118 },
+            zoom: 17,
+            mapId: "4504f8b37365c3d0",
+            });
+
+        const marker = new AdvancedMarkerElement({
+            map,
+            position: { lat: 45.4490336162423, lng: -73.45495868390118 },
+            title:"FORMATIO"
+        });
+    }
+
+
+    function subjectChange(id)
+    {
+        var autreTextField = document.querySelector('#contactSubjet');
+        var subject = document.querySelector(id).value;
+        if(subject == "Autre")
+        {
+            autreTextField.disabled = false;
+            autreTextField.required = true;
+        }
+        else
+        {
+            autreTextField.disabled = true;
+            autreTextField.required = false;
+        }
+    }
+</script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6a33FPe0W_MRnGL7FunOIB43XSUld8go&loading=async&callback=initMap"></script>
+<script>
+    const passwordShowIcon = document.querySelector('.eye-icon');
+    const input = document.querySelector('.password-box input');
+    const test = document.querySelector('#test-rene');
+    var password = true;
+
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+</script>
+{% endblock %}
